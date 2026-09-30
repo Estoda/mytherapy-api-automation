@@ -1,69 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-09-29T12:20:36 EEST" name="tests.AuthTest" finished-at="2026-09-29T12:20:45 EEST" duration-ms="9501">
+  <suite started-at="2026-09-30T06:18:56 EEST" name="tests.AvailabilityTest" finished-at="2026-09-30T06:19:02 EEST" duration-ms="5588">
     <groups>
     </groups>
-    <test started-at="2026-09-29T12:20:36 EEST" name="Command line test" finished-at="2026-09-29T12:20:45 EEST" duration-ms="9501">
-      <class name="tests.AuthTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.AuthTest@1efee8e7]" started-at="2026-09-29T12:20:36 EEST" name="setup" finished-at="2026-09-29T12:20:37 EEST" duration-ms="1008" status="PASS">
+    <test started-at="2026-09-30T06:18:56 EEST" name="Command line test" finished-at="2026-09-30T06:19:02 EEST" duration-ms="5588">
+      <class name="tests.AvailabilityTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.AvailabilityTest@de3a06f]" started-at="2026-09-30T06:18:56 EEST" name="setup" finished-at="2026-09-30T06:18:58 EEST" duration-ms="1109" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginWithBothFieldsEmpty()[pri:0, instance:tests.AuthTest@1efee8e7]" started-at="2026-09-29T12:20:37 EEST" name="loginWithBothFieldsEmpty" finished-at="2026-09-29T12:20:39 EEST" duration-ms="2529" status="PASS">
+        <test-method signature="getPatientAvailability()[pri:0, instance:tests.AvailabilityTest@de3a06f]" started-at="2026-09-30T06:18:58 EEST" name="getPatientAvailability" finished-at="2026-09-30T06:19:02 EEST" duration-ms="4376" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginWithBothFieldsEmpty -->
-        <test-method signature="loginWithEmptyEmail()[pri:0, instance:tests.AuthTest@1efee8e7]" started-at="2026-09-29T12:20:39 EEST" name="loginWithEmptyEmail" finished-at="2026-09-29T12:20:39 EEST" duration-ms="240" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithEmptyEmail -->
-        <test-method signature="loginWithEmptyPassword()[pri:0, instance:tests.AuthTest@1efee8e7]" started-at="2026-09-29T12:20:39 EEST" name="loginWithEmptyPassword" finished-at="2026-09-29T12:20:41 EEST" duration-ms="1859" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithEmptyPassword -->
-        <test-method signature="loginWithInvalidEmailFormat()[pri:0, instance:tests.AuthTest@1efee8e7]" started-at="2026-09-29T12:20:41 EEST" name="loginWithInvalidEmailFormat" finished-at="2026-09-29T12:20:42 EEST" duration-ms="352" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithInvalidEmailFormat -->
-        <test-method signature="loginWithMissingEmail()[pri:0, instance:tests.AuthTest@1efee8e7]" started-at="2026-09-29T12:20:42 EEST" name="loginWithMissingEmail" finished-at="2026-09-29T12:20:42 EEST" duration-ms="411" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithMissingEmail -->
-        <test-method signature="loginWithMissingPassword()[pri:0, instance:tests.AuthTest@1efee8e7]" started-at="2026-09-29T12:20:42 EEST" name="loginWithMissingPassword" finished-at="2026-09-29T12:20:42 EEST" duration-ms="310" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithMissingPassword -->
-        <test-method signature="loginWithNonExistingEmail()[pri:0, instance:tests.AuthTest@1efee8e7]" started-at="2026-09-29T12:20:42 EEST" name="loginWithNonExistingEmail" finished-at="2026-09-29T12:20:43 EEST" duration-ms="369" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithNonExistingEmail -->
-        <test-method signature="loginWithNullEmail()[pri:0, instance:tests.AuthTest@1efee8e7]" started-at="2026-09-29T12:20:43 EEST" name="loginWithNullEmail" finished-at="2026-09-29T12:20:43 EEST" duration-ms="333" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithNullEmail -->
-        <test-method signature="loginWithNullPassword()[pri:0, instance:tests.AuthTest@1efee8e7]" started-at="2026-09-29T12:20:43 EEST" name="loginWithNullPassword" finished-at="2026-09-29T12:20:43 EEST" duration-ms="223" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithNullPassword -->
-        <test-method signature="loginWithWrongEmailDataType()[pri:0, instance:tests.AuthTest@1efee8e7]" started-at="2026-09-29T12:20:43 EEST" name="loginWithWrongEmailDataType" finished-at="2026-09-29T12:20:44 EEST" duration-ms="337" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithWrongEmailDataType -->
-        <test-method signature="loginWithWrongPassword()[pri:0, instance:tests.AuthTest@1efee8e7]" started-at="2026-09-29T12:20:44 EEST" name="loginWithWrongPassword" finished-at="2026-09-29T12:20:44 EEST" duration-ms="604" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithWrongPassword -->
-        <test-method signature="loginWithWrongPasswordDataType()[pri:0, instance:tests.AuthTest@1efee8e7]" started-at="2026-09-29T12:20:44 EEST" name="loginWithWrongPasswordDataType" finished-at="2026-09-29T12:20:45 EEST" duration-ms="339" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithWrongPasswordDataType -->
-        <test-method signature="validLogin()[pri:0, instance:tests.AuthTest@1efee8e7]" started-at="2026-09-29T12:20:45 EEST" name="validLogin" finished-at="2026-09-29T12:20:45 EEST" duration-ms="497" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validLogin -->
-      </class> <!-- tests.AuthTest -->
+        </test-method> <!-- getPatientAvailability -->
+      </class> <!-- tests.AvailabilityTest -->
     </test> <!-- Command line test -->
-  </suite> <!-- tests.AuthTest -->
+  </suite> <!-- tests.AvailabilityTest -->
 </testng-results>

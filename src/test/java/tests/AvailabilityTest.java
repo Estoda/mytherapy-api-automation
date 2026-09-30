@@ -2,21 +2,23 @@ package tests;
 
 import base.BaseTest;
 import org.testng.annotations.Test;
+import utils.AuthManager;
 
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
-import tests.AuthTest.token;
 
 public class AvailabilityTest extends BaseTest {
     @Test 
     public void getPatientAvailability()
     {
+        String token = AuthManager.getToken();
         given()
-            .header("Authorization", "Bearer " + token)
+            .auth().oauth2(token)
         .when()
             .get("/api/patient/availability")
         .then()
-            .statusCode(200);
+            .statusCode(200)
+            .log().body();
     }    
 }

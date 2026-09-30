@@ -14,8 +14,6 @@ public class AuthTest extends BaseTest {
     // 1. Valid Login
     @Test
     public void validLogin() {
-
-        String token = 
         given()
             .contentType("application/json")
             .body("""
@@ -29,9 +27,7 @@ public class AuthTest extends BaseTest {
         .then()
             .statusCode(200)
             .body("token", not(emptyOrNullString()))
-            .body("expiration", not(emptyOrNullString()))
-            .extract()
-            .path("token");
+            .body("expiration", not(emptyOrNullString()));
     }
 
 

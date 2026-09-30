@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="13" failures="0" name="tests.AuthTest" time="8.404" errors="0" skipped="0">
+<testsuite tests="13" failures="0" name="tests.AuthTest" time="8.968" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="17.0.15+6-Ubuntu-0ubuntu120.04"/>
@@ -59,17 +59,17 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.stdout.encoding" value="UTF-8"/>
   </properties>
-  <testcase classname="tests.AuthTest" name="loginWithBothFieldsEmpty" time="2.532"/>
-  <testcase classname="tests.AuthTest" name="loginWithEmptyEmail" time="0.24"/>
-  <testcase classname="tests.AuthTest" name="loginWithEmptyPassword" time="1.858"/>
-  <testcase classname="tests.AuthTest" name="loginWithInvalidEmailFormat" time="0.351"/>
-  <testcase classname="tests.AuthTest" name="loginWithMissingEmail" time="0.411"/>
-  <testcase classname="tests.AuthTest" name="loginWithMissingPassword" time="0.31"/>
-  <testcase classname="tests.AuthTest" name="loginWithNonExistingEmail" time="0.368"/>
-  <testcase classname="tests.AuthTest" name="loginWithNullEmail" time="0.333"/>
-  <testcase classname="tests.AuthTest" name="loginWithNullPassword" time="0.223"/>
-  <testcase classname="tests.AuthTest" name="loginWithWrongEmailDataType" time="0.338"/>
-  <testcase classname="tests.AuthTest" name="loginWithWrongPassword" time="0.605"/>
-  <testcase classname="tests.AuthTest" name="loginWithWrongPasswordDataType" time="0.339"/>
-  <testcase classname="tests.AuthTest" name="validLogin" time="0.496"/>
+  <testcase classname="tests.AuthTest" name="loginWithBothFieldsEmpty" time="2.278"/>
+  <testcase classname="tests.AuthTest" name="loginWithEmptyEmail" time="0.243"/>
+  <testcase classname="tests.AuthTest" name="loginWithEmptyPassword" time="1.873"/>
+  <testcase classname="tests.AuthTest" name="loginWithInvalidEmailFormat" time="0.341"/>
+  <testcase classname="tests.AuthTest" name="loginWithMissingEmail" time="1.212"/>
+  <testcase classname="tests.AuthTest" name="loginWithMissingPassword" time="0.333"/>
+  <testcase classname="tests.AuthTest" name="loginWithNonExistingEmail" time="0.387"/>
+  <testcase classname="tests.AuthTest" name="loginWithNullEmail" time="0.331"/>
+  <testcase classname="tests.AuthTest" name="loginWithNullPassword" time="0.224"/>
+  <testcase classname="tests.AuthTest" name="loginWithWrongEmailDataType" time="0.337"/>
+  <testcase classname="tests.AuthTest" name="loginWithWrongPassword" time="0.597"/>
+  <testcase classname="tests.AuthTest" name="loginWithWrongPasswordDataType" time="0.317"/>
+  <testcase classname="tests.AuthTest" name="validLogin" time="0.495"/>
 </testsuite>
