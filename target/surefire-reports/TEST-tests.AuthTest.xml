@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="13" failures="0" name="tests.AuthTest" time="8.968" errors="0" skipped="0">
+<testsuite tests="13" failures="1" name="tests.AuthTest" time="11.367" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="17.0.15+6-Ubuntu-0ubuntu120.04"/>
@@ -30,7 +30,7 @@
     <property name="java.class.version" value="61.0"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="6.18.33.2-microsoft-standard-WSL2"/>
+    <property name="os.version" value="6.18.40.1-microsoft-standard-WSL2"/>
     <property name="library.jansi.path" value="/usr/share/maven/lib/jansi-native"/>
     <property name="user.home" value="/home/estoda"/>
     <property name="user.timezone" value="Africa/Cairo"/>
@@ -59,17 +59,53 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.stdout.encoding" value="UTF-8"/>
   </properties>
-  <testcase classname="tests.AuthTest" name="loginWithBothFieldsEmpty" time="2.278"/>
-  <testcase classname="tests.AuthTest" name="loginWithEmptyEmail" time="0.243"/>
-  <testcase classname="tests.AuthTest" name="loginWithEmptyPassword" time="1.873"/>
-  <testcase classname="tests.AuthTest" name="loginWithInvalidEmailFormat" time="0.341"/>
-  <testcase classname="tests.AuthTest" name="loginWithMissingEmail" time="1.212"/>
-  <testcase classname="tests.AuthTest" name="loginWithMissingPassword" time="0.333"/>
-  <testcase classname="tests.AuthTest" name="loginWithNonExistingEmail" time="0.387"/>
-  <testcase classname="tests.AuthTest" name="loginWithNullEmail" time="0.331"/>
-  <testcase classname="tests.AuthTest" name="loginWithNullPassword" time="0.224"/>
-  <testcase classname="tests.AuthTest" name="loginWithWrongEmailDataType" time="0.337"/>
-  <testcase classname="tests.AuthTest" name="loginWithWrongPassword" time="0.597"/>
-  <testcase classname="tests.AuthTest" name="loginWithWrongPasswordDataType" time="0.317"/>
-  <testcase classname="tests.AuthTest" name="validLogin" time="0.495"/>
+  <testcase classname="tests.AuthTest" name="loginWithBothFieldsEmpty" time="5.285"/>
+  <testcase classname="tests.AuthTest" name="loginWithEmptyEmail" time="0.362"/>
+  <testcase classname="tests.AuthTest" name="loginWithEmptyPassword" time="0.514"/>
+  <testcase classname="tests.AuthTest" name="loginWithInvalidEmailFormat" time="0.35"/>
+  <testcase classname="tests.AuthTest" name="loginWithMissingEmail" time="0.507"/>
+  <testcase classname="tests.AuthTest" name="loginWithMissingPassword" time="0.443"/>
+  <testcase classname="tests.AuthTest" name="loginWithNonExistingEmail" time="0.492"/>
+  <testcase classname="tests.AuthTest" name="loginWithNullEmail" time="0.375"/>
+  <testcase classname="tests.AuthTest" name="loginWithNullPassword" time="0.308">
+    <failure message="1 expectation failed.
+JSON path StatusCode doesn&apos;t match.
+Expected: &lt;400&gt;
+  Actual: null
+" type="java.lang.AssertionError">java.lang.AssertionError: 1 expectation failed.
+JSON path StatusCode doesn&apos;t match.
+Expected: &lt;400&gt;
+  Actual: null
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor54.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
+	at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at tests.AuthTest.loginWithNullPassword(AuthTest.java:237)
+</failure>
+  </testcase>
+  <testcase classname="tests.AuthTest" name="loginWithWrongEmailDataType" time="0.323"/>
+  <testcase classname="tests.AuthTest" name="loginWithWrongPassword" time="0.681"/>
+  <testcase classname="tests.AuthTest" name="loginWithWrongPasswordDataType" time="0.647"/>
+  <testcase classname="tests.AuthTest" name="validLogin" time="1.08"/>
 </testsuite>

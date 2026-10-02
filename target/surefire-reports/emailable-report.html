@@ -8,11 +8,46 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">tests.AvailabilityTest</th></tr>
-<tr><td><a href="#t0">Command line test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">5,588</td><td></td><td></td></tr>
+<tr><th colspan="8">Command line suite</th></tr>
+<tr><td><a href="#t0">Command line test</a></td><td class="num">14</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">10,607</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">tests.AvailabilityTest</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.AvailabilityTest</td><td><a href="#m0">getPatientAvailability</a></td><td rowspan="1">1790738338123</td><td rowspan="1">4376</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Command line suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.AuthTest</td><td><a href="#m0">loginWithEmptyEmail</a></td><td rowspan="1">1790837619485</td><td rowspan="1">299</td></tr><tr><th colspan="4">Command line test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="12">tests.AuthTest</td><td><a href="#m1">loginWithBothFieldsEmpty</a></td><td rowspan="1">1790837615569</td><td rowspan="1">3910</td></tr><tr class="passedeven"><td><a href="#m2">loginWithEmptyPassword</a></td><td rowspan="1">1790837619789</td><td rowspan="1">558</td></tr><tr class="passedeven"><td><a href="#m3">loginWithInvalidEmailFormat</a></td><td rowspan="1">1790837620348</td><td rowspan="1">353</td></tr><tr class="passedeven"><td><a href="#m4">loginWithMissingEmail</a></td><td rowspan="1">1790837620702</td><td rowspan="1">418</td></tr><tr class="passedeven"><td><a href="#m5">loginWithMissingPassword</a></td><td rowspan="1">1790837621121</td><td rowspan="1">334</td></tr><tr class="passedeven"><td><a href="#m6">loginWithNonExistingEmail</a></td><td rowspan="1">1790837621455</td><td rowspan="1">351</td></tr><tr class="passedeven"><td><a href="#m7">loginWithNullEmail</a></td><td rowspan="1">1790837621811</td><td rowspan="1">289</td></tr><tr class="passedeven"><td><a href="#m8">loginWithNullPassword</a></td><td rowspan="1">1790837622100</td><td rowspan="1">286</td></tr><tr class="passedeven"><td><a href="#m9">loginWithWrongEmailDataType</a></td><td rowspan="1">1790837622386</td><td rowspan="1">297</td></tr><tr class="passedeven"><td><a href="#m10">loginWithWrongPassword</a></td><td rowspan="1">1790837622684</td><td rowspan="1">529</td></tr><tr class="passedeven"><td><a href="#m11">loginWithWrongPasswordDataType</a></td><td rowspan="1">1790837623214</td><td rowspan="1">304</td></tr><tr class="passedeven"><td><a href="#m12">validLogin</a></td><td rowspan="1">1790837623518</td><td rowspan="1">504</td></tr><tr class="passedodd"><td rowspan="2">tests.AvailabilityTest</td><td><a href="#m13">getPatientAvailability</a></td><td rowspan="1">1790837624027</td><td rowspan="1">972</td></tr><tr class="passedodd"><td><a href="#m14">getPatientAvailabilityWithoutToken</a></td><td rowspan="1">1790837625000</td><td rowspan="1">206</td></tr></tbody>
 </table>
-<h2>Command line test</h2><h3 id="m0">tests.AvailabilityTest#getPatientAvailability</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Command line test</h2><h3 id="m0">tests.AuthTest#loginWithEmptyEmail</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;401&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at tests.AuthTest.loginWithEmptyEmail(AuthTest.java:92)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 47 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.AuthTest#loginWithBothFieldsEmpty</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.AuthTest#loginWithEmptyPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.AuthTest#loginWithInvalidEmailFormat</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">tests.AuthTest#loginWithMissingEmail</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">tests.AuthTest#loginWithMissingPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">tests.AuthTest#loginWithNonExistingEmail</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">tests.AuthTest#loginWithNullEmail</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">tests.AuthTest#loginWithNullPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">tests.AuthTest#loginWithWrongEmailDataType</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">tests.AuthTest#loginWithWrongPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">tests.AuthTest#loginWithWrongPasswordDataType</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">tests.AuthTest#validLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">tests.AvailabilityTest#getPatientAvailability</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">tests.AvailabilityTest#getPatientAvailabilityWithoutToken</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

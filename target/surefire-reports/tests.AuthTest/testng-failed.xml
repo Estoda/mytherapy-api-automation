@@ -6,9 +6,7 @@
       <class name="tests.AuthTest">
         <methods>
           <include name="setup"/>
-          <include name="loginWithEmptyEmail"/>
           <include name="loginWithNullPassword"/>
-          <include name="loginWithBothFieldsEmpty"/>
         </methods>
       </class> <!-- tests.AuthTest -->
     </classes>

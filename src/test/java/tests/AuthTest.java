@@ -2,14 +2,15 @@ package tests;
 
 import base.BaseTest;
 import org.testng.annotations.Test;
+import utils.Config;
 
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
 public class AuthTest extends BaseTest {
 
-    private static final String VALID_EMAIL = "programmer82253@gmail.com";
-    private static final String VALID_PASSWORD = "admin";
+    private static final String VALID_EMAIL = Config.patientEmail();
+    private static final String VALID_PASSWORD = Config.patientPassword();
 
     // 1. Valid Login
     @Test
@@ -89,7 +90,8 @@ public class AuthTest extends BaseTest {
             .post("/api/auth/login")
         .then()
             .statusCode(401)
-            .log().body();
+            .body("StatusCode", equalTo(401))
+            .body("Message", equalTo("Invalid credentials!"));
     }
 
 
@@ -130,7 +132,8 @@ public class AuthTest extends BaseTest {
             .post("/api/auth/login")
         .then()
             .statusCode(401)
-            .log().body();
+            .body("StatusCode", equalTo(401))
+            .body("Message", equalTo("Invalid credentials!"));
     }
 
 
@@ -232,7 +235,8 @@ public class AuthTest extends BaseTest {
             .post("/api/auth/login")
         .then()
             .statusCode(400)
-            .log().body();
+            .body("status", equalTo(400))
+            .body("errors.Password[0]", equalTo("The Password field is required."));
     }
 
 

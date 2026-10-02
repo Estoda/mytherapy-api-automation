@@ -1,21 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="15" passed="14" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-09-30T06:18:56 EEST" name="tests.AvailabilityTest" finished-at="2026-09-30T06:19:02 EEST" duration-ms="5588">
+  <suite started-at="2026-10-01T09:53:34 EEST" name="Command line suite" finished-at="2026-10-01T09:53:45 EEST" duration-ms="10607">
     <groups>
     </groups>
-    <test started-at="2026-09-30T06:18:56 EEST" name="Command line test" finished-at="2026-09-30T06:19:02 EEST" duration-ms="5588">
-      <class name="tests.AvailabilityTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.AvailabilityTest@de3a06f]" started-at="2026-09-30T06:18:56 EEST" name="setup" finished-at="2026-09-30T06:18:58 EEST" duration-ms="1109" status="PASS">
+    <test started-at="2026-10-01T09:53:34 EEST" name="Command line test" finished-at="2026-10-01T09:53:45 EEST" duration-ms="10607">
+      <class name="tests.AuthTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.AuthTest@12028586]" started-at="2026-10-01T09:53:34 EEST" name="setup" finished-at="2026-10-01T09:53:35 EEST" duration-ms="882" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="getPatientAvailability()[pri:0, instance:tests.AvailabilityTest@de3a06f]" started-at="2026-09-30T06:18:58 EEST" name="getPatientAvailability" finished-at="2026-09-30T06:19:02 EEST" duration-ms="4376" status="PASS">
+        <test-method signature="loginWithBothFieldsEmpty()[pri:0, instance:tests.AuthTest@12028586]" started-at="2026-10-01T09:53:35 EEST" name="loginWithBothFieldsEmpty" finished-at="2026-10-01T09:53:39 EEST" duration-ms="3910" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithBothFieldsEmpty -->
+        <test-method signature="loginWithEmptyEmail()[pri:0, instance:tests.AuthTest@12028586]" started-at="2026-10-01T09:53:39 EEST" name="loginWithEmptyEmail" finished-at="2026-10-01T09:53:39 EEST" duration-ms="299" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <400> but was <401>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <400> but was <401>.
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$1.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at tests.AuthTest.loginWithEmptyEmail(AuthTest.java:92)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithEmptyEmail -->
+        <test-method signature="loginWithEmptyPassword()[pri:0, instance:tests.AuthTest@12028586]" started-at="2026-10-01T09:53:39 EEST" name="loginWithEmptyPassword" finished-at="2026-10-01T09:53:40 EEST" duration-ms="558" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithEmptyPassword -->
+        <test-method signature="loginWithInvalidEmailFormat()[pri:0, instance:tests.AuthTest@12028586]" started-at="2026-10-01T09:53:40 EEST" name="loginWithInvalidEmailFormat" finished-at="2026-10-01T09:53:40 EEST" duration-ms="353" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInvalidEmailFormat -->
+        <test-method signature="loginWithMissingEmail()[pri:0, instance:tests.AuthTest@12028586]" started-at="2026-10-01T09:53:40 EEST" name="loginWithMissingEmail" finished-at="2026-10-01T09:53:41 EEST" duration-ms="418" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithMissingEmail -->
+        <test-method signature="loginWithMissingPassword()[pri:0, instance:tests.AuthTest@12028586]" started-at="2026-10-01T09:53:41 EEST" name="loginWithMissingPassword" finished-at="2026-10-01T09:53:41 EEST" duration-ms="334" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithMissingPassword -->
+        <test-method signature="loginWithNonExistingEmail()[pri:0, instance:tests.AuthTest@12028586]" started-at="2026-10-01T09:53:41 EEST" name="loginWithNonExistingEmail" finished-at="2026-10-01T09:53:41 EEST" duration-ms="351" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithNonExistingEmail -->
+        <test-method signature="loginWithNullEmail()[pri:0, instance:tests.AuthTest@12028586]" started-at="2026-10-01T09:53:41 EEST" name="loginWithNullEmail" finished-at="2026-10-01T09:53:42 EEST" duration-ms="289" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithNullEmail -->
+        <test-method signature="loginWithNullPassword()[pri:0, instance:tests.AuthTest@12028586]" started-at="2026-10-01T09:53:42 EEST" name="loginWithNullPassword" finished-at="2026-10-01T09:53:42 EEST" duration-ms="286" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithNullPassword -->
+        <test-method signature="loginWithWrongEmailDataType()[pri:0, instance:tests.AuthTest@12028586]" started-at="2026-10-01T09:53:42 EEST" name="loginWithWrongEmailDataType" finished-at="2026-10-01T09:53:42 EEST" duration-ms="297" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithWrongEmailDataType -->
+        <test-method signature="loginWithWrongPassword()[pri:0, instance:tests.AuthTest@12028586]" started-at="2026-10-01T09:53:42 EEST" name="loginWithWrongPassword" finished-at="2026-10-01T09:53:43 EEST" duration-ms="529" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithWrongPassword -->
+        <test-method signature="loginWithWrongPasswordDataType()[pri:0, instance:tests.AuthTest@12028586]" started-at="2026-10-01T09:53:43 EEST" name="loginWithWrongPasswordDataType" finished-at="2026-10-01T09:53:43 EEST" duration-ms="304" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithWrongPasswordDataType -->
+        <test-method signature="validLogin()[pri:0, instance:tests.AuthTest@12028586]" started-at="2026-10-01T09:53:43 EEST" name="validLogin" finished-at="2026-10-01T09:53:44 EEST" duration-ms="504" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+      </class> <!-- tests.AuthTest -->
+      <class name="tests.AvailabilityTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.AvailabilityTest@17776a8]" started-at="2026-10-01T09:53:44 EEST" name="setup" finished-at="2026-10-01T09:53:44 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="getPatientAvailability()[pri:0, instance:tests.AvailabilityTest@17776a8]" started-at="2026-10-01T09:53:44 EEST" name="getPatientAvailability" finished-at="2026-10-01T09:53:44 EEST" duration-ms="972" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getPatientAvailability -->
+        <test-method signature="getPatientAvailabilityWithoutToken()[pri:0, instance:tests.AvailabilityTest@17776a8]" started-at="2026-10-01T09:53:45 EEST" name="getPatientAvailabilityWithoutToken" finished-at="2026-10-01T09:53:45 EEST" duration-ms="206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getPatientAvailabilityWithoutToken -->
       </class> <!-- tests.AvailabilityTest -->
     </test> <!-- Command line test -->
-  </suite> <!-- tests.AvailabilityTest -->
+  </suite> <!-- Command line suite -->
 </testng-results>
