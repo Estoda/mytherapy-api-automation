@@ -2,20 +2,27 @@ package utils;
 
 import static io.restassured.RestAssured.given;
 
+import models.LoginRequest;
+
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 public class AuthManager
 {
-    public static String getToken()
+    private static final Map<Role, String> tokens = new ConcurrentHashMap<>();
+
+    public static String getToken(Role role)
     {
-        String requestBody = 
-        """
-                {
-                    "email": "%s",
-                    "password": "%s"
-                }
-        """.formatted(Config.patientEmail(), Config.patientPassword());
+        return tokens.computeIfAbsent(role, AuthManager::login);
+    }
+
+    private static String login(Role role)
+    {
+        LoginRequest request = new LoginRequest(Config.email(role), Config.password(role));
+
         return given()
                     .contentType("application/json")
-                    .body(requestBody)
+                    .body(request)
                 .when()
                     .post("/api/auth/login")
                 .then()

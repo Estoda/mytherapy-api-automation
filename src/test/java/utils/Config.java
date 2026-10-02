@@ -27,7 +27,7 @@ public class Config
         }
     }
 
-    private static String get(String key)
+    private static String get( String key)
     {
         String value = props.getProperty(key);
         if (value == null)
@@ -42,13 +42,13 @@ public class Config
         return get("baseUrl");
     }
 
-    public static String patientEmail()
+    public static String email(Role role)
     {
-        return get("patient.email");
+        return get(role.name().toLowerCase() + ".email");
     }
 
-    public static String patientPassword()
+    public static String password(Role role)
     {
-        return get("patient.password");
+        return get(role.name().toLowerCase() + ".password");
     }
 }

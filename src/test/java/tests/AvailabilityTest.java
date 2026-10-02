@@ -2,6 +2,7 @@ package tests;
 
 import base.BaseTest;
 import org.testng.annotations.Test;
+import utils.Role;
 import utils.AuthManager;
 
 import static io.restassured.RestAssured.*;
@@ -12,7 +13,7 @@ public class AvailabilityTest extends BaseTest {
     @Test 
     public void getPatientAvailability()
     {
-        String token = AuthManager.getToken();
+        String token = AuthManager.getToken(Role.PATIENT);
         
         given()
             .auth().oauth2(token)

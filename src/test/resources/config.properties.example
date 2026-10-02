@@ -1,3 +1,7 @@
 baseUrl=http://your-api-url
-patient.email=your-email
-patient.password=your-password
+patient.email=your-patient-email
+patient.password=your-patient-password
+therapist.email=your-therapist-email
+therapist.password=your-therapist-password
+admin.email=your-admin-email
+admin.password=your-admin-password
