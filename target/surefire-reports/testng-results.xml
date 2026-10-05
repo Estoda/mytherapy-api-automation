@@ -2,16 +2,16 @@
 <testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-10-05T18:04:35 EEST" name="Surefire suite" finished-at="2026-10-05T18:04:39 EEST" duration-ms="4291">
+  <suite started-at="2026-10-05T18:05:34 EEST" name="Surefire suite" finished-at="2026-10-05T18:05:38 EEST" duration-ms="4109">
     <groups>
     </groups>
-    <test started-at="2026-10-05T18:04:35 EEST" name="Surefire test" finished-at="2026-10-05T18:04:39 EEST" duration-ms="4291">
+    <test started-at="2026-10-05T18:05:34 EEST" name="Surefire test" finished-at="2026-10-05T18:05:38 EEST" duration-ms="4109">
       <class name="tests.TherapistAvailabilityTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.TherapistAvailabilityTest@77167fb7]" started-at="2026-10-05T18:04:35 EEST" name="setup" finished-at="2026-10-05T18:04:35 EEST" duration-ms="395" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.TherapistAvailabilityTest@77167fb7]" started-at="2026-10-05T18:05:34 EEST" name="setup" finished-at="2026-10-05T18:05:35 EEST" duration-ms="380" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="createAvailability()[pri:0, instance:tests.TherapistAvailabilityTest@77167fb7]" started-at="2026-10-05T18:04:35 EEST" name="createAvailability" finished-at="2026-10-05T18:04:39 EEST" duration-ms="3846" status="PASS">
+        <test-method signature="createAvailability()[pri:0, instance:tests.TherapistAvailabilityTest@77167fb7]" started-at="2026-10-05T18:05:35 EEST" name="createAvailability" finished-at="2026-10-05T18:05:38 EEST" duration-ms="3691" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createAvailability -->

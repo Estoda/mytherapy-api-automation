@@ -13,7 +13,7 @@ import static org.hamcrest.Matchers.*;
 
 public class TherapistAvailabilityTest extends BaseTest
 {
-    @Test 
+    @Test(groups = {"smoke"})
     public void getMyAvailability()
     {
         String token = AuthManager.getToken(Role.THERAPIST);
@@ -27,7 +27,7 @@ public class TherapistAvailabilityTest extends BaseTest
             .log().body();
     }
 
-    @Test 
+    @Test (groups = {"regression"})
     public void createAvailability()
     {
         String token = AuthManager.getToken(Role.THERAPIST);
@@ -62,6 +62,7 @@ public class TherapistAvailabilityTest extends BaseTest
         .when()
             .get("/api/therapist/availability/my")
         .then()
+            .log().all()
             .statusCode(200)
             .body("slotId", not(hasItem(slotId)));
     }
