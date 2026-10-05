@@ -1,7 +1,9 @@
 C:\Users\zbook g5\source\repos\MyTherapyAPI-Automation\src\test\java\base\BaseTest.java
+C:\Users\zbook g5\source\repos\MyTherapyAPI-Automation\src\test\java\models\AvailabilityRequest.java
 C:\Users\zbook g5\source\repos\MyTherapyAPI-Automation\src\test\java\models\LoginRequest.java
 C:\Users\zbook g5\source\repos\MyTherapyAPI-Automation\src\test\java\tests\AuthTest.java
 C:\Users\zbook g5\source\repos\MyTherapyAPI-Automation\src\test\java\tests\AvailabilityTest.java
+C:\Users\zbook g5\source\repos\MyTherapyAPI-Automation\src\test\java\tests\TherapistAvailabilityTest.java
 C:\Users\zbook g5\source\repos\MyTherapyAPI-Automation\src\test\java\utils\AuthManager.java
 C:\Users\zbook g5\source\repos\MyTherapyAPI-Automation\src\test\java\utils\Config.java
 C:\Users\zbook g5\source\repos\MyTherapyAPI-Automation\src\test\java\utils\Role.java

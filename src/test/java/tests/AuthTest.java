@@ -16,7 +16,7 @@ public class AuthTest extends BaseTest {
     private static final String VALID_PASSWORD = Config.password(Role.PATIENT);
 
     // 1. Valid Login
-    @Test
+    @Test(groups = {"smoke"})
     public void validLogin() {
         given()
             .contentType("application/json")
@@ -30,7 +30,7 @@ public class AuthTest extends BaseTest {
     }
 
     // 7. Missing Email
-    @Test
+    @Test(groups = {"negative"})
     public void loginWithMissingEmail() {
 
         given()
@@ -50,7 +50,7 @@ public class AuthTest extends BaseTest {
 
 
     // 8. Missing Password
-    @Test
+    @Test(groups = {"negative"})
     public void loginWithMissingPassword() {
 
         given()
@@ -69,7 +69,7 @@ public class AuthTest extends BaseTest {
     }
 
     // 10. Null Email
-    @Test
+    @Test(groups = {"negative"})
     public void loginWithNullEmail() {
 
         given()
@@ -90,7 +90,7 @@ public class AuthTest extends BaseTest {
 
 
     // 11. Null Password
-    @Test
+    @Test(groups = {"negative"})
     public void loginWithNullPassword() {
 
         given()
@@ -111,7 +111,7 @@ public class AuthTest extends BaseTest {
 
 
     // 12. Wrong Email Data Type
-    @Test
+    @Test(groups = {"negative"})
     public void loginWithWrongEmailDataType() {
 
         given()
@@ -136,7 +136,7 @@ public class AuthTest extends BaseTest {
 
 
     // 13. Wrong Password Data Type
-    @Test
+    @Test(groups = {"negative"})
     public void loginWithWrongPasswordDataType() {
 
         given()
@@ -159,6 +159,9 @@ public class AuthTest extends BaseTest {
             );
     }
 
+    // Per project requirements: empty or badly formatted credentials are treated
+    // as authentication failures (401), not validation errors (400).
+    // Missing or null fields are rejected by model validation (400).
     @DataProvider(name = "invalidCredentials")
     public Object[][] invalidCredentials()
     {
@@ -173,7 +176,7 @@ public class AuthTest extends BaseTest {
         };
     }
 
-    @Test(dataProvider = "invalidCredentials")
+    @Test(dataProvider = "invalidCredentials", groups = {"negative"})
     public void loginWithInvalidCredentials(String scenario, String email, String password)
     {
         given()

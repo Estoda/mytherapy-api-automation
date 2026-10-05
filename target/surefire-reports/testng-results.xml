@@ -1,185 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="15" passed="15" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-10-02T15:26:34 EEST" name="Surefire suite" finished-at="2026-10-02T15:26:42 EEST" duration-ms="8067">
+  <suite started-at="2026-10-05T18:04:35 EEST" name="Surefire suite" finished-at="2026-10-05T18:04:39 EEST" duration-ms="4291">
     <groups>
     </groups>
-    <test started-at="2026-10-02T15:26:34 EEST" name="Surefire test" finished-at="2026-10-02T15:26:42 EEST" duration-ms="8067">
-      <class name="tests.AuthTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.AuthTest@78e117e3]" started-at="2026-10-02T15:26:34 EEST" name="setup" finished-at="2026-10-02T15:26:35 EEST" duration-ms="394" status="PASS">
+    <test started-at="2026-10-05T18:04:35 EEST" name="Surefire test" finished-at="2026-10-05T18:04:39 EEST" duration-ms="4291">
+      <class name="tests.TherapistAvailabilityTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.TherapistAvailabilityTest@77167fb7]" started-at="2026-10-05T18:04:35 EEST" name="setup" finished-at="2026-10-05T18:04:35 EEST" duration-ms="395" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginWithInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AuthTest@78e117e3]" started-at="2026-10-02T15:26:35 EEST" name="loginWithInvalidCredentials" data-provider="invalidCredentials" finished-at="2026-10-02T15:26:37 EEST" duration-ms="2515" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[wrong password]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[programmer82253@gmail.com]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[wrongPassword123]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="createAvailability()[pri:0, instance:tests.TherapistAvailabilityTest@77167fb7]" started-at="2026-10-05T18:04:35 EEST" name="createAvailability" finished-at="2026-10-05T18:04:39 EEST" duration-ms="3846" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginWithInvalidCredentials -->
-        <test-method signature="loginWithInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AuthTest@78e117e3]" started-at="2026-10-02T15:26:37 EEST" name="loginWithInvalidCredentials" data-provider="invalidCredentials" finished-at="2026-10-02T15:26:37 EEST" duration-ms="287" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[non-existing email]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[nonexisting123456@gmail.com]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithInvalidCredentials -->
-        <test-method signature="loginWithInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AuthTest@78e117e3]" started-at="2026-10-02T15:26:37 EEST" name="loginWithInvalidCredentials" data-provider="invalidCredentials" finished-at="2026-10-02T15:26:38 EEST" duration-ms="268" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[empty email]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithInvalidCredentials -->
-        <test-method signature="loginWithInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AuthTest@78e117e3]" started-at="2026-10-02T15:26:38 EEST" name="loginWithInvalidCredentials" data-provider="invalidCredentials" finished-at="2026-10-02T15:26:38 EEST" duration-ms="495" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[empty password]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[programmer82253@gmail.com]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithInvalidCredentials -->
-        <test-method signature="loginWithInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AuthTest@78e117e3]" started-at="2026-10-02T15:26:38 EEST" name="loginWithInvalidCredentials" data-provider="invalidCredentials" finished-at="2026-10-02T15:26:38 EEST" duration-ms="256" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[both fields empty]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithInvalidCredentials -->
-        <test-method signature="loginWithInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AuthTest@78e117e3]" started-at="2026-10-02T15:26:38 EEST" name="loginWithInvalidCredentials" data-provider="invalidCredentials" finished-at="2026-10-02T15:26:39 EEST" duration-ms="278" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[invalid email format]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[not-an-email]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithInvalidCredentials -->
-        <test-method signature="loginWithMissingEmail()[pri:0, instance:tests.AuthTest@78e117e3]" started-at="2026-10-02T15:26:39 EEST" name="loginWithMissingEmail" finished-at="2026-10-02T15:26:39 EEST" duration-ms="319" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithMissingEmail -->
-        <test-method signature="loginWithMissingPassword()[pri:0, instance:tests.AuthTest@78e117e3]" started-at="2026-10-02T15:26:39 EEST" name="loginWithMissingPassword" finished-at="2026-10-02T15:26:39 EEST" duration-ms="290" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithMissingPassword -->
-        <test-method signature="loginWithNullEmail()[pri:0, instance:tests.AuthTest@78e117e3]" started-at="2026-10-02T15:26:39 EEST" name="loginWithNullEmail" finished-at="2026-10-02T15:26:40 EEST" duration-ms="287" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithNullEmail -->
-        <test-method signature="loginWithNullPassword()[pri:0, instance:tests.AuthTest@78e117e3]" started-at="2026-10-02T15:26:40 EEST" name="loginWithNullPassword" finished-at="2026-10-02T15:26:40 EEST" duration-ms="414" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithNullPassword -->
-        <test-method signature="loginWithWrongEmailDataType()[pri:0, instance:tests.AuthTest@78e117e3]" started-at="2026-10-02T15:26:40 EEST" name="loginWithWrongEmailDataType" finished-at="2026-10-02T15:26:40 EEST" duration-ms="290" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithWrongEmailDataType -->
-        <test-method signature="loginWithWrongPasswordDataType()[pri:0, instance:tests.AuthTest@78e117e3]" started-at="2026-10-02T15:26:40 EEST" name="loginWithWrongPasswordDataType" finished-at="2026-10-02T15:26:41 EEST" duration-ms="258" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithWrongPasswordDataType -->
-        <test-method signature="validLogin()[pri:0, instance:tests.AuthTest@78e117e3]" started-at="2026-10-02T15:26:41 EEST" name="validLogin" finished-at="2026-10-02T15:26:41 EEST" duration-ms="569" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validLogin -->
-      </class> <!-- tests.AuthTest -->
-      <class name="tests.AvailabilityTest">
-        <test-method signature="getPatientAvailability()[pri:0, instance:tests.AvailabilityTest@2ea227af]" started-at="2026-10-02T15:26:41 EEST" name="getPatientAvailability" finished-at="2026-10-02T15:26:42 EEST" duration-ms="833" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getPatientAvailability -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.AvailabilityTest@2ea227af]" started-at="2026-10-02T15:26:41 EEST" name="setup" finished-at="2026-10-02T15:26:41 EEST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="getPatientAvailabilityWithoutToken()[pri:0, instance:tests.AvailabilityTest@2ea227af]" started-at="2026-10-02T15:26:42 EEST" name="getPatientAvailabilityWithoutToken" finished-at="2026-10-02T15:26:42 EEST" duration-ms="259" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getPatientAvailabilityWithoutToken -->
-      </class> <!-- tests.AvailabilityTest -->
+        </test-method> <!-- createAvailability -->
+      </class> <!-- tests.TherapistAvailabilityTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>

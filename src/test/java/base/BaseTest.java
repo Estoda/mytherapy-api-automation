@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeClass;
 
 public class BaseTest 
 {
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void setup()
     {
         RestAssured.baseURI = Config.baseUrl();

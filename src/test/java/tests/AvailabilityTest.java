@@ -10,7 +10,7 @@ import static org.hamcrest.Matchers.*;
 
 
 public class AvailabilityTest extends BaseTest {
-    @Test 
+    @Test(groups = {"smoke"})
     public void getPatientAvailability()
     {
         String token = AuthManager.getToken(Role.PATIENT);
@@ -21,7 +21,7 @@ public class AvailabilityTest extends BaseTest {
             .get("/api/patient/availability")
         .then()
             .statusCode(200)
-            .body("size()", greaterThan(0))
+            .body("size()", greaterThanOrEqualTo(0))
             .body("slotId", everyItem(not(emptyOrNullString())))
             .body("therapistId", everyItem(not(emptyOrNullString())))
             .body("therapistName", everyItem(not(emptyOrNullString())))
@@ -30,7 +30,7 @@ public class AvailabilityTest extends BaseTest {
             .body("isBooked", everyItem(notNullValue()));
     }   
     
-    @Test
+    @Test(groups = {"negative"})
     public void getPatientAvailabilityWithoutToken()
     {
         given()

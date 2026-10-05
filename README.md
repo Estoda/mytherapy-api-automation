@@ -193,3 +193,14 @@ GET /api/users/therapists
 GET /api/users/patients/{id}
 GET /api/users/therapists/{id}
 ```
+
+---
+
+# Known API Behaviors (per requirements)
+
+| Scenario                                        | Status | Error body                              |
+| ----------------------------------------------- | ------ | --------------------------------------- |
+| Wrong password / non-existing email             | 401    | `StatusCode`, `Message`                 |
+| Empty email or password, invalid email format   | 401    | `StatusCode`, `Message`                 |
+| Missing or null field                           | 400    | `status`, `errors` (ASP.NET validation) |
+| Wrong data type (e.g. number instead of string) | 400    | `status`, `errors` (ASP.NET validation) |

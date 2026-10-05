@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="8.574" tests="15" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="12.616" tests="13" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Microsoft\jdk-17.0.20.8-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\zbook g5\AppData\Local\Temp\surefire9469873831760496788\surefirebooter-20261002152633938_3.jar C:\Users\zbook g5\AppData\Local\Temp\surefire9469873831760496788 2026-10-02T15-26-33_746-jvmRun1 surefire-20261002152633938_1tmp surefire_0-20261002152633938_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\zbook g5\AppData\Local\Temp\surefire14697200472964813495\surefirebooter-20261005143454547_3.jar C:\Users\zbook g5\AppData\Local\Temp\surefire14697200472964813495 2026-10-05T14-34-54_369-jvmRun1 surefire-20261005143454547_1tmp surefire_0-20261005143454547_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\zbook g5\source\repos\MyTherapyAPI-Automation\target\test-classes;C:\Users\zbook g5\source\repos\MyTherapyAPI-Automation\target\classes;C:\Users\zbook g5\.m2\repository\io\rest-assured\rest-assured\5.5.6\rest-assured-5.5.6.jar;C:\Users\zbook g5\.m2\repository\org\apache\groovy\groovy\4.0.22\groovy-4.0.22.jar;C:\Users\zbook g5\.m2\repository\org\apache\groovy\groovy-xml\4.0.22\groovy-xml-4.0.22.jar;C:\Users\zbook g5\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\zbook g5\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\zbook g5\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\zbook g5\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\zbook g5\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\zbook g5\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\zbook g5\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\zbook g5\.m2\repository\io\rest-assured\json-path\5.5.6\json-path-5.5.6.jar;C:\Users\zbook g5\.m2\repository\org\apache\groovy\groovy-json\4.0.22\groovy-json-4.0.22.jar;C:\Users\zbook g5\.m2\repository\io\rest-assured\rest-assured-common\5.5.6\rest-assured-common-5.5.6.jar;C:\Users\zbook g5\.m2\repository\io\rest-assured\xml-path\5.5.6\xml-path-5.5.6.jar;C:\Users\zbook g5\.m2\repository\org\apache\commons\commons-lang3\3.18.0\commons-lang3-3.18.0.jar;C:\Users\zbook g5\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\zbook g5\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\zbook g5\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\zbook g5\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\zbook g5\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.20.0\jackson-databind-2.20.0.jar;C:\Users\zbook g5\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.20\jackson-annotations-2.20.jar;C:\Users\zbook g5\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.20.0\jackson-core-2.20.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\zbook g5\AppData\Local\Temp\surefire9469873831760496788\surefirebooter-20261002152633938_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\zbook g5\AppData\Local\Temp\surefire14697200472964813495\surefirebooter-20261005143454547_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.20+8-LTS"/>
@@ -47,6 +47,7 @@
     <property name="java.version" value="17.0.20"/>
     <property name="user.dir" value="C:\Users\zbook g5\source\repos\MyTherapyAPI-Automation"/>
     <property name="os.arch" value="amd64"/>
+    <property name="groups" value="negative"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
@@ -58,24 +59,22 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="loginWithInvalidCredentials[wrong password, programmer82253@gmail.com, wrongPassword123](1)" classname="tests.AuthTest" time="2.517">
+  <testcase name="loginWithInvalidCredentials[wrong password, programmer82253@gmail.com, wrongPassword123](1)" classname="tests.AuthTest" time="6.537">
     <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
 SLF4J(W): Defaulting to no-operation (NOP) logger implementation
 SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
 ]]></system-err>
   </testcase>
-  <testcase name="loginWithInvalidCredentials[non-existing email, nonexisting123456@gmail.com, admin](2)" classname="tests.AuthTest" time="0.286"/>
-  <testcase name="loginWithInvalidCredentials[empty email, , admin](3)" classname="tests.AuthTest" time="0.268"/>
-  <testcase name="loginWithInvalidCredentials[empty password, programmer82253@gmail.com, ](4)" classname="tests.AuthTest" time="0.496"/>
-  <testcase name="loginWithInvalidCredentials[both fields empty, , ](5)" classname="tests.AuthTest" time="0.257"/>
-  <testcase name="loginWithInvalidCredentials[invalid email format, not-an-email, admin](6)" classname="tests.AuthTest" time="0.277"/>
-  <testcase name="loginWithMissingEmail" classname="tests.AuthTest" time="0.32"/>
-  <testcase name="loginWithMissingPassword" classname="tests.AuthTest" time="0.29"/>
-  <testcase name="loginWithNullEmail" classname="tests.AuthTest" time="0.287"/>
-  <testcase name="loginWithNullPassword" classname="tests.AuthTest" time="0.414"/>
-  <testcase name="loginWithWrongEmailDataType" classname="tests.AuthTest" time="0.29"/>
-  <testcase name="loginWithWrongPasswordDataType" classname="tests.AuthTest" time="0.258"/>
-  <testcase name="validLogin" classname="tests.AuthTest" time="0.57"/>
-  <testcase name="getPatientAvailability" classname="tests.AvailabilityTest" time="0.832"/>
-  <testcase name="getPatientAvailabilityWithoutToken" classname="tests.AvailabilityTest" time="0.258"/>
+  <testcase name="loginWithInvalidCredentials[non-existing email, nonexisting123456@gmail.com, admin](2)" classname="tests.AuthTest" time="0.401"/>
+  <testcase name="loginWithInvalidCredentials[empty email, , admin](3)" classname="tests.AuthTest" time="0.341"/>
+  <testcase name="loginWithInvalidCredentials[empty password, programmer82253@gmail.com, ](4)" classname="tests.AuthTest" time="0.578"/>
+  <testcase name="loginWithInvalidCredentials[both fields empty, , ](5)" classname="tests.AuthTest" time="0.328"/>
+  <testcase name="loginWithInvalidCredentials[invalid email format, not-an-email, admin](6)" classname="tests.AuthTest" time="0.324"/>
+  <testcase name="loginWithMissingEmail" classname="tests.AuthTest" time="0.424"/>
+  <testcase name="loginWithMissingPassword" classname="tests.AuthTest" time="0.336"/>
+  <testcase name="loginWithNullEmail" classname="tests.AuthTest" time="0.331"/>
+  <testcase name="loginWithNullPassword" classname="tests.AuthTest" time="0.31"/>
+  <testcase name="loginWithWrongEmailDataType" classname="tests.AuthTest" time="0.332"/>
+  <testcase name="loginWithWrongPasswordDataType" classname="tests.AuthTest" time="0.693"/>
+  <testcase name="getPatientAvailabilityWithoutToken" classname="tests.AvailabilityTest" time="0.7"/>
 </testsuite>
