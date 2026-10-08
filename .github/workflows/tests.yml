@@ -41,17 +41,9 @@ jobs:
             echo "admin.password=$ADMIN_PASSWORD",
           } > src/test/resources/config.properties
 
-      - name: Debug login from runner
-        env:
-          BASE_URL: ${{ secrets.BASE_URL }}
-          PATIENT_EMAIL: ${{ secrets.PATIENT_EMAIL }}
-          PATIENT_PASSWORD: ${{ secrets.PATIENT_PASSWORD }}
+      - name: Debug config file
         run: |
-          status=$(curl -s -o response.txt -w "%{http_code}" -X POST "$BASE_URL/api/auth/login" \
-            -H "Content-Type: application/json" \
-            -d "{\"email\":\"$PATIENT_EMAIL\",\"password\":\"$PATIENT_PASSWORD\"}")
-          echo "HTTP status: $status"
-          if [ "$status" != "200" ]; then cat response.txt; fi
+          awk -F= '{ print $1 ": length " length(substr($0, index($0,"=")+1)) }' src/test/resources/config.properties
 
       - name: Run tests
         run: mvn test
