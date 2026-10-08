@@ -41,9 +41,13 @@ jobs:
             echo "admin.password=$ADMIN_PASSWORD",
           } > src/test/resources/config.properties
 
-      - name: Debug config file
+      - name: Debug last characters
         run: |
-          awk -F= '{ print $1 ": length " length(substr($0, index($0,"=")+1)) }' src/test/resources/config.properties
+          while IFS= read -r line; do
+            key="${line%%=*}"
+            printf '%s -> last byte: ' "$key"
+            printf '%s' "$line" | tail -c 1 | od -An -c
+          done < src/test/resources/config.properties
 
       - name: Run tests
         run: mvn test
