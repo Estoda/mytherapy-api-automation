@@ -40,5 +40,18 @@ jobs:
             echo "admin.email=$ADMIN_EMAIL",
             echo "admin.password=$ADMIN_PASSWORD",
           } > src/test/resources/config.properties
+
+      - name: Debug secrets lengths
+        env:
+          PATIENT_EMAIL: ${{ secrets.PATIENT_EMAIL }}
+          PATIENT_PASSWORD: ${{ secrets.PATIENT_PASSWORD }}
+          THERAPIST_EMAIL: ${{ secrets.THERAPIST_EMAIL }}
+          THERAPIST_PASSWORD: ${{ secrets.THERAPIST_PASSWORD }}
+        run: |
+        echo "patient email length: ${#PATIENT_EMAIL}"
+        echo "patient password length: ${#PATIENT_PASSWORD}"
+        echo "therapist email length: ${#THERAPIST_EMAIL}"
+        echo "therapist password length: ${#THERAPIST_PASSWORD}"
+
       - name: Run tests
         run: mvn test
