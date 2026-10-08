@@ -1,5 +1,7 @@
 # MyTherapy API Automation
 
+[![API Tests](https://github.com/Estoda/mytherapy-api-automation/actions/workflows/tests.yml/badge.svg)](https://github.com/Estoda/mytherapy-api-automation/actions/workflows/tests.yml)
+
 Automated API testing project for the **MyTherapy** backend using Java, Rest Assured, TestNG, and Maven.
 
 The goal of this project is to build a professional API automation framework and automate the API test scenarios that were previously designed and executed manually using Postman.
@@ -54,6 +56,7 @@ This project focuses on testing these APIs automatically.
 - Maven (with Maven Surefire Plugin)
 - Jackson (JSON serialization)
 - Git / GitHub
+- GitHub Actions (CI)
 
 ---
 
@@ -83,6 +86,9 @@ JWT Bearer Token
 
 ```text
 MyTherapyAPI-Automation/
+├── .github/
+│   └── workflows/
+│       └── tests.yml
 ├── pom.xml
 ├── testng.xml
 ├── .gitignore
@@ -175,8 +181,30 @@ mvn test -Dtest=AuthTest#validLogin
 | Group        | Meaning                                                                       |
 | ------------ | ----------------------------------------------------------------------------- |
 | `smoke`      | A few basic checks that show the API is alive (login, read data with a token) |
-| `negative`   | Invalid input, missing data, and unauthorized requests                        |
+| `negative`   | Invalid input, missing data, and unauthorized or forbidden requests           |
 | `regression` | Longer flows that create and clean up data                                    |
+
+---
+
+# Continuous Integration
+
+A GitHub Actions workflow (`.github/workflows/tests.yml`) runs the full test suite on every push and pull request to `main`.
+
+The workflow:
+
+1. Checks out the code.
+2. Sets up Java 17.
+3. Creates `src/test/resources/config.properties` from GitHub Secrets.
+4. Runs `mvn test`.
+
+Because `config.properties` is not committed, the credentials are stored as repository secrets (**Settings → Secrets and variables → Actions**):
+
+| Secret                                  | Used for                     |
+| --------------------------------------- | ---------------------------- |
+| `BASE_URL`                              | API base URL                 |
+| `PATIENT_EMAIL`, `PATIENT_PASSWORD`     | Patient account              |
+| `THERAPIST_EMAIL`, `THERAPIST_PASSWORD` | Therapist account            |
+| `ADMIN_EMAIL`, `ADMIN_PASSWORD`         | Admin account (not used yet) |
 
 ---
 
@@ -219,10 +247,11 @@ Use token in protected requests
 
 ## Patient Availability (`AvailabilityTest`)
 
-| Scenario                              | Expected result                         |
-| ------------------------------------- | --------------------------------------- |
-| Get availability with a patient token | 200, list of slots with required fields |
-| Get availability without a token      | 401                                     |
+| Scenario                                             | Expected result                         |
+| ---------------------------------------------------- | --------------------------------------- |
+| Get availability with a patient token                | 200, list of slots with required fields |
+| Get availability without a token                     | 401                                     |
+| Get availability with a therapist token (wrong role) | 403                                     |
 
 ## Therapist Availability (`TherapistAvailabilityTest`)
 
@@ -241,6 +270,8 @@ Use token in protected requests
 | Empty email or password, invalid email format   | 401    | `StatusCode`, `Message`                 |
 | Missing or null field                           | 400    | `status`, `errors` (ASP.NET validation) |
 | Wrong data type (e.g. number instead of string) | 400    | `status`, `errors` (ASP.NET validation) |
+| No token on a protected endpoint                | 401    | empty body                              |
+| Valid token with the wrong role                 | 403    | empty body                              |
 
 ---
 
@@ -340,10 +371,10 @@ GET /api/users/therapists/{id}
 - [x] Authentication tests
 - [x] Patient availability tests
 - [x] Therapist availability tests (create, delete, verify)
+- [x] Wrong-role token test (a therapist token on a patient endpoint returns 403)
+- [x] GitHub Actions workflow that runs `mvn test` on every push
 
 ## Planned
 
-- [ ] Wrong-role token tests (for example, a therapist token on a patient endpoint)
 - [ ] Tests for the remaining endpoints (bookings, payments, profile, reviews, sessions, admin, users)
 - [ ] Test reports (Allure or ExtentReports)
-- [ ] GitHub Actions workflow that runs `mvn test` on every push
