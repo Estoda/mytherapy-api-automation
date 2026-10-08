@@ -39,4 +39,17 @@ public class AvailabilityTest extends BaseTest {
         .then()
             .statusCode(401);
     }
+
+    @Test(groups = {"negative"})
+    public void getPatientAvailabilityWithTherapistToken()
+    {
+        String token = AuthManager.getToken(Role.THERAPIST);
+
+        given()
+            .auth().oauth2(token)
+        .when()
+            .get("/api/patient/availability")
+        .then()
+            .statusCode(403);
+    }
 }
