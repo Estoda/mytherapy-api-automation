@@ -10,7 +10,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    stesp:
+    steps:
       - name: Checkout code
         uses: action/checkout@v4
 
