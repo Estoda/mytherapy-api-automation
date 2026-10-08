@@ -33,21 +33,13 @@ jobs:
         run: |
           {
             echo "baseUrl=$BASE_URL"
-            echo "patient.email=$PATIENT_EMAIL",
-            echo "patient.password=$PATIENT_PASSWORD",
-            echo "therapist.email=$THERAPIST_EMAIL",
-            echo "therapist.password=$THERAPIST_PASSWORD",
-            echo "admin.email=$ADMIN_EMAIL",
-            echo "admin.password=$ADMIN_PASSWORD",
+            echo "patient.email=$PATIENT_EMAIL"
+            echo "patient.password=$PATIENT_PASSWORD"
+            echo "therapist.email=$THERAPIST_EMAIL"
+            echo "therapist.password=$THERAPIST_PASSWORD"
+            echo "admin.email=$ADMIN_EMAIL"
+            echo "admin.password=$ADMIN_PASSWORD"
           } > src/test/resources/config.properties
-
-      - name: Debug last characters
-        run: |
-          while IFS= read -r line; do
-            key="${line%%=*}"
-            printf '%s -> last byte: ' "$key"
-            printf '%s' "$line" | tail -c 1 | od -An -c
-          done < src/test/resources/config.properties
 
       - name: Run tests
         run: mvn test
