@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Surefire_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="tests.UsersTest" class="method navigator-link" hash-for-method="getPatients">getPatients</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.UsersTest" class="method navigator-link" hash-for-method="getTherapistByIdWithAdminToken">getTherapistByIdWithAdminToken</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Surefire_suite -->
@@ -126,9 +126,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="getPatients">
-                  </a> <!-- getPatients -->
-                  <span class="method-name">getPatients</span>
+                  <a name="getTherapistByIdWithAdminToken">
+                  </a> <!-- getTherapistByIdWithAdminToken -->
+                  <span class="method-name">getTherapistByIdWithAdminToken</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -177,7 +177,7 @@
               <span class="test-group-name">smoke</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">getPatients</span>
+                <span class="method-in-group-name">getTherapistByIdWithAdminToken</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -199,14 +199,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'getPatients')
+data.setCell(0, 1, 'getTherapistByIdWithAdminToken')
 data.setCell(0, 2, 'tests.UsersTest')
-data.setCell(0, 3, 8731);
+data.setCell(0, 3, 6733);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -221,7 +221,7 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">7 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -229,9 +229,17 @@ return data;
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">probeTherapistsWithTherapistToken</span>
                 <br/>
+                <span class="ignored-method-name">probeTherapistsWithoutToken</span>
+                <br/>
+                <span class="ignored-method-name">getPatients</span>
+                <br/>
                 <span class="ignored-method-name">getTherapists</span>
                 <br/>
-                <span class="ignored-method-name">probeTherapistsWithoutToken</span>
+                <span class="ignored-method-name">getPatientsWithTherapistToken</span>
+                <br/>
+                <span class="ignored-method-name">getPatientsWithoutToken</span>
+                <br/>
+                <span class="ignored-method-name">getPatientsWithPatientToken</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -249,8 +257,8 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">getPatients</span>
-                <span class="method-start">359 ms</span>
+                <span class="method-name">getTherapistByIdWithAdminToken</span>
+                <span class="method-start">391 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
