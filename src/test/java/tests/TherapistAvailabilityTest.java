@@ -23,8 +23,7 @@ public class TherapistAvailabilityTest extends BaseTest
         .when()
             .get("/api/therapist/availability/my")
         .then()
-            .statusCode(200)
-            .log().body();
+            .statusCode(200);
     }
 
     @Test (groups = {"regression"})
@@ -62,7 +61,6 @@ public class TherapistAvailabilityTest extends BaseTest
         .when()
             .get("/api/therapist/availability/my")
         .then()
-            .log().all()
             .statusCode(200)
             .body("slotId", not(hasItem(slotId)));
     }
