@@ -161,6 +161,43 @@ public class UsersTest extends BaseTest
             .body("totalSessions", notNullValue());
     }
 
+    @Test(groups = {"negative"})
+    public void getTherapistByIdWithoutToken()
+    {
+        given()
+        .when()
+            .get("/api/users/therapists/89f1cd95-952b-45b2-b1fd-29156bf68040")
+        .then()
+            .statusCode(401);
+    }
+
+    @Test(groups = {"negative"})
+    public void getTherapistByUnknownId()
+    {
+        String unknownId = "00000000-0000-0000-0000-000000000000";
+
+        given()
+            .auth().oauth2(AuthManager.getToken(Role.PATIENT))
+        .when()
+            .get("/api/users/therapists/" + unknownId)
+        .then()
+            .statusCode(404) 
+            .body(containsString("Therapist not found with id: " + unknownId));
+    }
+
+    @Test(groups = {"negative"})
+    public void getTherapistByInvalidFormat()
+    {
+        given()
+            .auth().oauth2(AuthManager.getToken(Role.PATIENT))
+        .when()
+            .get("/api/users/therapists/abc")
+        .then()
+            .statusCode(400)
+            .body("status", equalTo(400))
+            .body("errors.id[0]", containsString("is not valid"));
+    }
+
     @Test(groups = {"smoke"})
     public void getPatients()
     {
@@ -207,5 +244,39 @@ public class UsersTest extends BaseTest
             .get("/api/users/patients")
         .then()
             .statusCode(403);
+    }
+
+    @Test(groups = {"smoke"})
+    public void getPatientByIdWithAdminToken()
+    {
+        String token = AuthManager.getToken(Role.ADMIN);
+
+        String id = given()
+                .auth().oauth2(token)
+            .when()
+                .get("/api/users/patients")
+            .then()
+                .statusCode(200)
+                .extract()
+                .path("id[0]");
+
+        given()
+            .auth().oauth2(token)
+        .when()
+            .get("/api/users/patients/" + id)
+        .then()
+            .statusCode(200)
+            .body("id", equalTo(id))
+            .body("fullName", not(emptyOrNullString()));
+    }
+
+    @Test(groups = {"negative"})
+    public void getPatientByIdWithoutToken()
+    {
+        given()
+        .when()
+            .get("/api/users/patients/bba76eab-becb-4fb8-907c-34d28bd5278d")
+        .then()
+            .statusCode(401);
     }
 }
