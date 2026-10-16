@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">14 methods,   14 passed</span>
+                    <span class="method-stats">16 methods,   16 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -109,6 +109,16 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="tests.UsersTest" class="method navigator-link" hash-for-method="getPatientByIdWithoutToken">getPatientByIdWithoutToken</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.UsersTest" class="method navigator-link" hash-for-method="getPatientByInvalidIdFormat">getPatientByInvalidIdFormat</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.UsersTest" class="method navigator-link" hash-for-method="getPatientByUnknownId">getPatientByUnknownId</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -201,6 +211,20 @@
                   <a name="getPatientByIdWithoutToken">
                   </a> <!-- getPatientByIdWithoutToken -->
                   <span class="method-name">getPatientByIdWithoutToken</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getPatientByInvalidIdFormat">
+                  </a> <!-- getPatientByInvalidIdFormat -->
+                  <span class="method-name">getPatientByInvalidIdFormat</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getPatientByUnknownId">
+                  </a> <!-- getPatientByUnknownId -->
+                  <span class="method-name">getPatientByUnknownId</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -332,6 +356,14 @@
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
+                <span class="method-in-group-name">getPatientByInvalidIdFormat</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">getPatientByUnknownId</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
                 <span class="method-in-group-name">getPatientsWithoutToken</span>
                 <br/>
               </div> <!-- method-in-group -->
@@ -404,68 +436,76 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(14);
+data.addRows(16);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'getPatientByIdWithAdminToken')
 data.setCell(0, 2, 'tests.UsersTest')
-data.setCell(0, 3, 10652);
+data.setCell(0, 3, 10036);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'getTherapistByIdWithTherapistToken')
 data.setCell(1, 2, 'tests.UsersTest')
-data.setCell(1, 3, 5271);
+data.setCell(1, 3, 5958);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'getTherapistByIdWithPatientToken')
+data.setCell(2, 1, 'getTherapistsWithAdminToken')
 data.setCell(2, 2, 'tests.UsersTest')
-data.setCell(2, 3, 5034);
+data.setCell(2, 3, 2589);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'getTherapistByUnknownId')
+data.setCell(3, 1, 'getTherapistByIdWithPatientToken')
 data.setCell(3, 2, 'tests.UsersTest')
-data.setCell(3, 3, 3910);
+data.setCell(3, 3, 2532);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'getTherapistByIdWithAdminToken')
+data.setCell(4, 1, 'getTherapistsWithTherapistToken')
 data.setCell(4, 2, 'tests.UsersTest')
-data.setCell(4, 3, 3660);
+data.setCell(4, 3, 2152);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'getPatientByIdWithoutToken')
+data.setCell(5, 1, 'getTherapistsWithPatientToken')
 data.setCell(5, 2, 'tests.UsersTest')
-data.setCell(5, 3, 2321);
+data.setCell(5, 3, 1987);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'getTherapistByIdWithoutToken')
+data.setCell(6, 1, 'getPatientByInvalidIdFormat')
 data.setCell(6, 2, 'tests.UsersTest')
-data.setCell(6, 3, 2260);
+data.setCell(6, 3, 1966);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'getTherapistsWithAdminToken')
+data.setCell(7, 1, 'getPatientByIdWithoutToken')
 data.setCell(7, 2, 'tests.UsersTest')
-data.setCell(7, 3, 2061);
+data.setCell(7, 3, 1956);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'getPatients')
+data.setCell(8, 1, 'probeTherapistsWithoutToken')
 data.setCell(8, 2, 'tests.UsersTest')
-data.setCell(8, 3, 2006);
+data.setCell(8, 3, 1935);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'getTherapistByInvalidFormat')
+data.setCell(9, 1, 'getTherapistByIdWithoutToken')
 data.setCell(9, 2, 'tests.UsersTest')
-data.setCell(9, 3, 1921);
+data.setCell(9, 3, 1795);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'getPatientsWithoutToken')
+data.setCell(10, 1, 'getPatients')
 data.setCell(10, 2, 'tests.UsersTest')
-data.setCell(10, 3, 1843);
+data.setCell(10, 3, 1755);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'getTherapistsWithTherapistToken')
+data.setCell(11, 1, 'getTherapistByInvalidFormat')
 data.setCell(11, 2, 'tests.UsersTest')
-data.setCell(11, 3, 1826);
+data.setCell(11, 3, 1732);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'getTherapistsWithPatientToken')
+data.setCell(12, 1, 'getPatientsWithoutToken')
 data.setCell(12, 2, 'tests.UsersTest')
-data.setCell(12, 3, 1762);
+data.setCell(12, 3, 1730);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'probeTherapistsWithoutToken')
+data.setCell(13, 1, 'getPatientByUnknownId')
 data.setCell(13, 2, 'tests.UsersTest')
-data.setCell(13, 3, 1388);
+data.setCell(13, 3, 1486);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'getTherapistByIdWithAdminToken')
+data.setCell(14, 2, 'tests.UsersTest')
+data.setCell(14, 3, 1480);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'getTherapistByUnknownId')
+data.setCell(15, 2, 'tests.UsersTest')
+data.setCell(15, 3, 1308);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 45 seconds</span>
+              <span class="suite-total-time">Total running time: 42 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -486,9 +526,9 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">tests.UsersTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">getPatientsWithPatientToken</span>
-                <br/>
                 <span class="ignored-method-name">getPatientsWithTherapistToken</span>
+                <br/>
+                <span class="ignored-method-name">getPatientsWithPatientToken</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -507,59 +547,67 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">getPatientByIdWithAdminToken</span>
-                <span class="method-start">431 ms</span>
+                <span class="method-start">432 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getPatientByIdWithoutToken</span>
-                <span class="method-start">11087 ms</span>
+                <span class="method-start">10472 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getPatientByInvalidIdFormat</span>
+                <span class="method-start">12428 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getPatientByUnknownId</span>
+                <span class="method-start">14395 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getPatients</span>
-                <span class="method-start">13408 ms</span>
+                <span class="method-start">15882 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getPatientsWithoutToken</span>
-                <span class="method-start">15414 ms</span>
+                <span class="method-start">17638 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getTherapistByIdWithAdminToken</span>
-                <span class="method-start">17257 ms</span>
+                <span class="method-start">19368 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getTherapistByIdWithPatientToken</span>
-                <span class="method-start">20919 ms</span>
+                <span class="method-start">20849 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getTherapistByIdWithTherapistToken</span>
-                <span class="method-start">25954 ms</span>
+                <span class="method-start">23381 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getTherapistByIdWithoutToken</span>
-                <span class="method-start">31225 ms</span>
+                <span class="method-start">29340 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getTherapistByInvalidFormat</span>
-                <span class="method-start">33486 ms</span>
+                <span class="method-start">31136 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getTherapistByUnknownId</span>
-                <span class="method-start">35407 ms</span>
+                <span class="method-start">32868 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getTherapistsWithAdminToken</span>
-                <span class="method-start">39318 ms</span>
+                <span class="method-start">34177 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getTherapistsWithPatientToken</span>
-                <span class="method-start">41380 ms</span>
+                <span class="method-start">36767 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getTherapistsWithTherapistToken</span>
-                <span class="method-start">43142 ms</span>
+                <span class="method-start">38754 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">probeTherapistsWithoutToken</span>
-                <span class="method-start">44968 ms</span>
+                <span class="method-start">40907 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

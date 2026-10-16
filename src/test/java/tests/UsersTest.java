@@ -279,4 +279,31 @@ public class UsersTest extends BaseTest
         .then()
             .statusCode(401);
     }
+
+    @Test(groups = {"negative"})
+    public void getPatientByUnknownId()
+    {
+        String unknownId = "00000000-0000-0000-0000-000000000000";
+
+        given()
+            .auth().oauth2(AuthManager.getToken(Role.ADMIN))
+        .when()
+            .get("/api/users/patients/" + unknownId)
+        .then()
+            .statusCode(404)
+            .body(containsString("Patient not found with id: " + unknownId));
+    }
+
+    @Test(groups = {"negative"})
+    public void getPatientByInvalidIdFormat()
+    {
+        given()
+            .auth().oauth2(AuthManager.getToken(Role.ADMIN))
+        .when()
+            .get("/api/users/patients/abc")
+        .then()
+            .statusCode(400)
+            .body("status", equalTo(400))
+            .body("errors.id[0]", containsString("is not valid"));
+    }
 }
