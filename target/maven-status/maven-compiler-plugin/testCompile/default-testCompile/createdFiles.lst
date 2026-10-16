@@ -1,10 +1,11 @@
+tests\ProfileTest.class
+utils\Config.class
+tests\UsersTest.class
+utils\AuthManager.class
 base\BaseTest.class
 models\AvailabilityRequest.class
 tests\AvailabilityTest.class
 utils\Role.class
 tests\TherapistAvailabilityTest.class
-utils\Config.class
 models\LoginRequest.class
-tests\UsersTest.class
 tests\AuthTest.class
-utils\AuthManager.class

@@ -1,101 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="18" passed="16" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-10-16T12:59:48 EEST" name="Surefire suite" finished-at="2026-10-16T13:00:31 EEST" duration-ms="42869">
+  <suite started-at="2026-10-16T13:07:42 EEST" name="Surefire suite" finished-at="2026-10-16T13:08:07 EEST" duration-ms="24856">
     <groups>
       <group name="negative">
-        <method signature="UsersTest.getPatientByIdWithoutToken()[pri:0, instance:tests.UsersTest@d4342c2]" name="getPatientByIdWithoutToken" class="tests.UsersTest"/>
-        <method signature="UsersTest.getPatientByInvalidIdFormat()[pri:0, instance:tests.UsersTest@d4342c2]" name="getPatientByInvalidIdFormat" class="tests.UsersTest"/>
-        <method signature="UsersTest.getPatientByUnknownId()[pri:0, instance:tests.UsersTest@d4342c2]" name="getPatientByUnknownId" class="tests.UsersTest"/>
-        <method signature="UsersTest.getPatientsWithoutToken()[pri:0, instance:tests.UsersTest@d4342c2]" name="getPatientsWithoutToken" class="tests.UsersTest"/>
-        <method signature="UsersTest.getTherapistByIdWithoutToken()[pri:0, instance:tests.UsersTest@d4342c2]" name="getTherapistByIdWithoutToken" class="tests.UsersTest"/>
-        <method signature="UsersTest.getTherapistByInvalidFormat()[pri:0, instance:tests.UsersTest@d4342c2]" name="getTherapistByInvalidFormat" class="tests.UsersTest"/>
-        <method signature="UsersTest.getTherapistByUnknownId()[pri:0, instance:tests.UsersTest@d4342c2]" name="getTherapistByUnknownId" class="tests.UsersTest"/>
-        <method signature="UsersTest.probeTherapistsWithoutToken()[pri:0, instance:tests.UsersTest@d4342c2]" name="probeTherapistsWithoutToken" class="tests.UsersTest"/>
+        <method signature="ProfileTest.getEarningsWithAdminToken()[pri:0, instance:tests.ProfileTest@6b26e945]" name="getEarningsWithAdminToken" class="tests.ProfileTest"/>
+        <method signature="ProfileTest.getEarningsWithPatientToken()[pri:0, instance:tests.ProfileTest@6b26e945]" name="getEarningsWithPatientToken" class="tests.ProfileTest"/>
+        <method signature="ProfileTest.getEarningsWithoutToken()[pri:0, instance:tests.ProfileTest@6b26e945]" name="getEarningsWithoutToken" class="tests.ProfileTest"/>
+        <method signature="ProfileTest.getVerificationStatusWithAdminToken()[pri:0, instance:tests.ProfileTest@6b26e945]" name="getVerificationStatusWithAdminToken" class="tests.ProfileTest"/>
+        <method signature="ProfileTest.getVerificationStatusWithPatientToken()[pri:0, instance:tests.ProfileTest@6b26e945]" name="getVerificationStatusWithPatientToken" class="tests.ProfileTest"/>
+        <method signature="ProfileTest.getVerificationStatusWithoutToken()[pri:0, instance:tests.ProfileTest@6b26e945]" name="getVerificationStatusWithoutToken" class="tests.ProfileTest"/>
       </group> <!-- negative -->
       <group name="smoke">
-        <method signature="UsersTest.getPatientByIdWithAdminToken()[pri:0, instance:tests.UsersTest@d4342c2]" name="getPatientByIdWithAdminToken" class="tests.UsersTest"/>
-        <method signature="UsersTest.getPatients()[pri:0, instance:tests.UsersTest@d4342c2]" name="getPatients" class="tests.UsersTest"/>
-        <method signature="UsersTest.getTherapistByIdWithAdminToken()[pri:0, instance:tests.UsersTest@d4342c2]" name="getTherapistByIdWithAdminToken" class="tests.UsersTest"/>
-        <method signature="UsersTest.getTherapistByIdWithPatientToken()[pri:0, instance:tests.UsersTest@d4342c2]" name="getTherapistByIdWithPatientToken" class="tests.UsersTest"/>
-        <method signature="UsersTest.getTherapistByIdWithTherapistToken()[pri:0, instance:tests.UsersTest@d4342c2]" name="getTherapistByIdWithTherapistToken" class="tests.UsersTest"/>
-        <method signature="UsersTest.getTherapistsWithAdminToken()[pri:0, instance:tests.UsersTest@d4342c2]" name="getTherapistsWithAdminToken" class="tests.UsersTest"/>
-        <method signature="UsersTest.getTherapistsWithPatientToken()[pri:0, instance:tests.UsersTest@d4342c2]" name="getTherapistsWithPatientToken" class="tests.UsersTest"/>
-        <method signature="UsersTest.getTherapistsWithTherapistToken()[pri:0, instance:tests.UsersTest@d4342c2]" name="getTherapistsWithTherapistToken" class="tests.UsersTest"/>
+        <method signature="ProfileTest.getEarningsWithTherapistToken()[pri:0, instance:tests.ProfileTest@6b26e945]" name="getEarningsWithTherapistToken" class="tests.ProfileTest"/>
+        <method signature="ProfileTest.getVerificationStatusWithTherapistToken()[pri:0, instance:tests.ProfileTest@6b26e945]" name="getVerificationStatusWithTherapistToken" class="tests.ProfileTest"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2026-10-16T12:59:48 EEST" name="Surefire test" finished-at="2026-10-16T13:00:31 EEST" duration-ms="42869">
-      <class name="tests.UsersTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.UsersTest@d4342c2]" started-at="2026-10-16T12:59:48 EEST" name="setup" finished-at="2026-10-16T12:59:48 EEST" duration-ms="421" status="PASS">
+    <test started-at="2026-10-16T13:07:42 EEST" name="Surefire test" finished-at="2026-10-16T13:08:07 EEST" duration-ms="24856">
+      <class name="tests.ProfileTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.ProfileTest@6b26e945]" started-at="2026-10-16T13:07:42 EEST" name="setup" finished-at="2026-10-16T13:07:43 EEST" duration-ms="354" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="getPatientByIdWithAdminToken()[pri:0, instance:tests.UsersTest@d4342c2]" started-at="2026-10-16T12:59:48 EEST" name="getPatientByIdWithAdminToken" finished-at="2026-10-16T12:59:58 EEST" duration-ms="10036" status="PASS">
+        <test-method signature="getEarningsWithAdminToken()[pri:0, instance:tests.ProfileTest@6b26e945]" started-at="2026-10-16T13:07:43 EEST" name="getEarningsWithAdminToken" finished-at="2026-10-16T13:07:50 EEST" duration-ms="7606" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getPatientByIdWithAdminToken -->
-        <test-method signature="getPatientByIdWithoutToken()[pri:0, instance:tests.UsersTest@d4342c2]" started-at="2026-10-16T12:59:58 EEST" name="getPatientByIdWithoutToken" finished-at="2026-10-16T13:00:00 EEST" duration-ms="1956" status="PASS">
+        </test-method> <!-- getEarningsWithAdminToken -->
+        <test-method signature="getEarningsWithPatientToken()[pri:0, instance:tests.ProfileTest@6b26e945]" started-at="2026-10-16T13:07:50 EEST" name="getEarningsWithPatientToken" finished-at="2026-10-16T13:07:54 EEST" duration-ms="3788" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getPatientByIdWithoutToken -->
-        <test-method signature="getPatientByInvalidIdFormat()[pri:0, instance:tests.UsersTest@d4342c2]" started-at="2026-10-16T13:00:00 EEST" name="getPatientByInvalidIdFormat" finished-at="2026-10-16T13:00:02 EEST" duration-ms="1966" status="PASS">
+        </test-method> <!-- getEarningsWithPatientToken -->
+        <test-method signature="getEarningsWithTherapistToken()[pri:0, instance:tests.ProfileTest@6b26e945]" started-at="2026-10-16T13:07:54 EEST" name="getEarningsWithTherapistToken" finished-at="2026-10-16T13:07:59 EEST" duration-ms="4488" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getPatientByInvalidIdFormat -->
-        <test-method signature="getPatientByUnknownId()[pri:0, instance:tests.UsersTest@d4342c2]" started-at="2026-10-16T13:00:02 EEST" name="getPatientByUnknownId" finished-at="2026-10-16T13:00:04 EEST" duration-ms="1486" status="PASS">
+        </test-method> <!-- getEarningsWithTherapistToken -->
+        <test-method signature="getEarningsWithoutToken()[pri:0, instance:tests.ProfileTest@6b26e945]" started-at="2026-10-16T13:07:59 EEST" name="getEarningsWithoutToken" finished-at="2026-10-16T13:08:01 EEST" duration-ms="1811" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getPatientByUnknownId -->
-        <test-method signature="getPatients()[pri:0, instance:tests.UsersTest@d4342c2]" started-at="2026-10-16T13:00:04 EEST" name="getPatients" finished-at="2026-10-16T13:00:05 EEST" duration-ms="1755" status="PASS">
+        </test-method> <!-- getEarningsWithoutToken -->
+        <test-method signature="getVerificationStatusWithAdminToken()[pri:0, instance:tests.ProfileTest@6b26e945]" started-at="2026-10-16T13:08:01 EEST" name="getVerificationStatusWithAdminToken" finished-at="2026-10-16T13:08:02 EEST" duration-ms="1848" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getPatients -->
-        <test-method signature="getPatientsWithoutToken()[pri:0, instance:tests.UsersTest@d4342c2]" started-at="2026-10-16T13:00:05 EEST" name="getPatientsWithoutToken" finished-at="2026-10-16T13:00:07 EEST" duration-ms="1730" status="PASS">
+        </test-method> <!-- getVerificationStatusWithAdminToken -->
+        <test-method signature="getVerificationStatusWithPatientToken()[pri:0, instance:tests.ProfileTest@6b26e945]" started-at="2026-10-16T13:08:02 EEST" name="getVerificationStatusWithPatientToken" finished-at="2026-10-16T13:08:04 EEST" duration-ms="1478" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getPatientsWithoutToken -->
-        <test-method signature="getTherapistByIdWithAdminToken()[pri:0, instance:tests.UsersTest@d4342c2]" started-at="2026-10-16T13:00:07 EEST" name="getTherapistByIdWithAdminToken" finished-at="2026-10-16T13:00:09 EEST" duration-ms="1480" status="PASS">
+        </test-method> <!-- getVerificationStatusWithPatientToken -->
+        <test-method signature="getVerificationStatusWithTherapistToken()[pri:0, instance:tests.ProfileTest@6b26e945]" started-at="2026-10-16T13:08:04 EEST" name="getVerificationStatusWithTherapistToken" finished-at="2026-10-16T13:08:06 EEST" duration-ms="1835" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getTherapistByIdWithAdminToken -->
-        <test-method signature="getTherapistByIdWithPatientToken()[pri:0, instance:tests.UsersTest@d4342c2]" started-at="2026-10-16T13:00:09 EEST" name="getTherapistByIdWithPatientToken" finished-at="2026-10-16T13:00:11 EEST" duration-ms="2532" status="PASS">
+        </test-method> <!-- getVerificationStatusWithTherapistToken -->
+        <test-method signature="getVerificationStatusWithoutToken()[pri:0, instance:tests.ProfileTest@6b26e945]" started-at="2026-10-16T13:08:06 EEST" name="getVerificationStatusWithoutToken" finished-at="2026-10-16T13:08:07 EEST" duration-ms="1608" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getTherapistByIdWithPatientToken -->
-        <test-method signature="getTherapistByIdWithTherapistToken()[pri:0, instance:tests.UsersTest@d4342c2]" started-at="2026-10-16T13:00:11 EEST" name="getTherapistByIdWithTherapistToken" finished-at="2026-10-16T13:00:17 EEST" duration-ms="5958" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getTherapistByIdWithTherapistToken -->
-        <test-method signature="getTherapistByIdWithoutToken()[pri:0, instance:tests.UsersTest@d4342c2]" started-at="2026-10-16T13:00:17 EEST" name="getTherapistByIdWithoutToken" finished-at="2026-10-16T13:00:19 EEST" duration-ms="1795" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getTherapistByIdWithoutToken -->
-        <test-method signature="getTherapistByInvalidFormat()[pri:0, instance:tests.UsersTest@d4342c2]" started-at="2026-10-16T13:00:19 EEST" name="getTherapistByInvalidFormat" finished-at="2026-10-16T13:00:21 EEST" duration-ms="1732" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getTherapistByInvalidFormat -->
-        <test-method signature="getTherapistByUnknownId()[pri:0, instance:tests.UsersTest@d4342c2]" started-at="2026-10-16T13:00:21 EEST" name="getTherapistByUnknownId" finished-at="2026-10-16T13:00:22 EEST" duration-ms="1308" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getTherapistByUnknownId -->
-        <test-method signature="getTherapistsWithAdminToken()[pri:0, instance:tests.UsersTest@d4342c2]" started-at="2026-10-16T13:00:22 EEST" name="getTherapistsWithAdminToken" finished-at="2026-10-16T13:00:24 EEST" duration-ms="2589" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getTherapistsWithAdminToken -->
-        <test-method signature="getTherapistsWithPatientToken()[pri:0, instance:tests.UsersTest@d4342c2]" started-at="2026-10-16T13:00:24 EEST" name="getTherapistsWithPatientToken" finished-at="2026-10-16T13:00:26 EEST" duration-ms="1987" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getTherapistsWithPatientToken -->
-        <test-method signature="getTherapistsWithTherapistToken()[pri:0, instance:tests.UsersTest@d4342c2]" started-at="2026-10-16T13:00:26 EEST" name="getTherapistsWithTherapistToken" finished-at="2026-10-16T13:00:29 EEST" duration-ms="2152" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getTherapistsWithTherapistToken -->
-        <test-method signature="probeTherapistsWithoutToken()[pri:0, instance:tests.UsersTest@d4342c2]" started-at="2026-10-16T13:00:29 EEST" name="probeTherapistsWithoutToken" finished-at="2026-10-16T13:00:31 EEST" duration-ms="1935" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- probeTherapistsWithoutToken -->
-      </class> <!-- tests.UsersTest -->
+        </test-method> <!-- getVerificationStatusWithoutToken -->
+      </class> <!-- tests.ProfileTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>
