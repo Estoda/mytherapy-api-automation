@@ -118,4 +118,47 @@ public class BookingTest extends BaseTest
             .statusCode(200)
             .body("appointmentId", hasItem(appointmentId));
     }
+
+    // BUG-002: GET /api/patient/bookings/my returns the appointment id in the slotId field.
+    // Expected: the real slot id. Note: when enabled, this creates one slot and one booking.
+    @Test(groups = {"booking-flow"}, enabled = false)
+    public void bookingListReturnsRealSlotId()
+    {
+        String therapistToken = AuthManager.getToken(Role.THERAPIST);
+        String patientToken = AuthManager.getToken(Role.PATIENT);
+
+        Instant start = Instant.now().plus(2, ChronoUnit.DAYS)
+                .truncatedTo(ChronoUnit.MINUTES).plusSeconds(59);
+        Instant end = start.plus(1, ChronoUnit.HOURS);
+
+        String slotId = given()
+                .auth().oauth2(therapistToken)
+                .contentType("application/json")
+                .body(new AvailabilityRequest(start.toString(), end.toString()))
+            .when()
+                .post("/api/therapist/availability")
+            .then()
+                .statusCode(200)
+                .extract()
+                .path("slotId");
+
+        String appointmentId = given()
+                .auth().oauth2(patientToken)
+                .contentType("application/json")
+                .body(new BookingRequest(slotId))
+            .when()
+                .post("/api/patient/bookings")
+            .then()
+                .statusCode(200)
+                .extract()
+                .path("appointmentId");
+
+        given()
+            .auth().oauth2(patientToken)
+        .when()
+            .get("/api/patient/bookings/my")
+        .then()
+            .statusCode(200)
+            .body("find { it.appointmentId == '" + appointmentId + "' }.slotId", equalTo(slotId));
+    }
 }

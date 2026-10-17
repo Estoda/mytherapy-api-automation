@@ -42,4 +42,4 @@ jobs:
           } > src/test/resources/config.properties
 
       - name: Run tests
-        run: mvn test
+        run: mvn test -DexcludedGroups=booking-flow
