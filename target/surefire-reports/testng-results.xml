@@ -1,61 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+<testng-results ignored="1" total="5" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-10-16T13:07:42 EEST" name="Surefire suite" finished-at="2026-10-16T13:08:07 EEST" duration-ms="24856">
+  <suite started-at="2026-10-17T15:14:17 EEST" name="Surefire suite" finished-at="2026-10-17T15:14:24 EEST" duration-ms="7401">
     <groups>
       <group name="negative">
-        <method signature="ProfileTest.getEarningsWithAdminToken()[pri:0, instance:tests.ProfileTest@6b26e945]" name="getEarningsWithAdminToken" class="tests.ProfileTest"/>
-        <method signature="ProfileTest.getEarningsWithPatientToken()[pri:0, instance:tests.ProfileTest@6b26e945]" name="getEarningsWithPatientToken" class="tests.ProfileTest"/>
-        <method signature="ProfileTest.getEarningsWithoutToken()[pri:0, instance:tests.ProfileTest@6b26e945]" name="getEarningsWithoutToken" class="tests.ProfileTest"/>
-        <method signature="ProfileTest.getVerificationStatusWithAdminToken()[pri:0, instance:tests.ProfileTest@6b26e945]" name="getVerificationStatusWithAdminToken" class="tests.ProfileTest"/>
-        <method signature="ProfileTest.getVerificationStatusWithPatientToken()[pri:0, instance:tests.ProfileTest@6b26e945]" name="getVerificationStatusWithPatientToken" class="tests.ProfileTest"/>
-        <method signature="ProfileTest.getVerificationStatusWithoutToken()[pri:0, instance:tests.ProfileTest@6b26e945]" name="getVerificationStatusWithoutToken" class="tests.ProfileTest"/>
+        <method signature="BookingTest.getMyBookingsWithAdminToken()[pri:0, instance:tests.BookingTest@778d1062]" name="getMyBookingsWithAdminToken" class="tests.BookingTest"/>
+        <method signature="BookingTest.getMyBookingsWithTherapistToken()[pri:0, instance:tests.BookingTest@778d1062]" name="getMyBookingsWithTherapistToken" class="tests.BookingTest"/>
+        <method signature="BookingTest.getMyBookingsWithoutToken()[pri:0, instance:tests.BookingTest@778d1062]" name="getMyBookingsWithoutToken" class="tests.BookingTest"/>
       </group> <!-- negative -->
       <group name="smoke">
-        <method signature="ProfileTest.getEarningsWithTherapistToken()[pri:0, instance:tests.ProfileTest@6b26e945]" name="getEarningsWithTherapistToken" class="tests.ProfileTest"/>
-        <method signature="ProfileTest.getVerificationStatusWithTherapistToken()[pri:0, instance:tests.ProfileTest@6b26e945]" name="getVerificationStatusWithTherapistToken" class="tests.ProfileTest"/>
+        <method signature="BookingTest.getMyBookingsWithPatientToken()[pri:0, instance:tests.BookingTest@778d1062]" name="getMyBookingsWithPatientToken" class="tests.BookingTest"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2026-10-16T13:07:42 EEST" name="Surefire test" finished-at="2026-10-16T13:08:07 EEST" duration-ms="24856">
-      <class name="tests.ProfileTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.ProfileTest@6b26e945]" started-at="2026-10-16T13:07:42 EEST" name="setup" finished-at="2026-10-16T13:07:43 EEST" duration-ms="354" status="PASS">
+    <test started-at="2026-10-17T15:14:17 EEST" name="Surefire test" finished-at="2026-10-17T15:14:24 EEST" duration-ms="7401">
+      <class name="tests.BookingTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.BookingTest@778d1062]" started-at="2026-10-17T15:14:17 EEST" name="setup" finished-at="2026-10-17T15:14:17 EEST" duration-ms="386" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="getEarningsWithAdminToken()[pri:0, instance:tests.ProfileTest@6b26e945]" started-at="2026-10-16T13:07:43 EEST" name="getEarningsWithAdminToken" finished-at="2026-10-16T13:07:50 EEST" duration-ms="7606" status="PASS">
+        <test-method signature="getMyBookingsWithAdminToken()[pri:0, instance:tests.BookingTest@778d1062]" started-at="2026-10-17T15:14:17 EEST" name="getMyBookingsWithAdminToken" finished-at="2026-10-17T15:14:21 EEST" duration-ms="3618" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getEarningsWithAdminToken -->
-        <test-method signature="getEarningsWithPatientToken()[pri:0, instance:tests.ProfileTest@6b26e945]" started-at="2026-10-16T13:07:50 EEST" name="getEarningsWithPatientToken" finished-at="2026-10-16T13:07:54 EEST" duration-ms="3788" status="PASS">
+        </test-method> <!-- getMyBookingsWithAdminToken -->
+        <test-method signature="getMyBookingsWithPatientToken()[pri:0, instance:tests.BookingTest@778d1062]" started-at="2026-10-17T15:14:21 EEST" name="getMyBookingsWithPatientToken" finished-at="2026-10-17T15:14:22 EEST" duration-ms="1534" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getEarningsWithPatientToken -->
-        <test-method signature="getEarningsWithTherapistToken()[pri:0, instance:tests.ProfileTest@6b26e945]" started-at="2026-10-16T13:07:54 EEST" name="getEarningsWithTherapistToken" finished-at="2026-10-16T13:07:59 EEST" duration-ms="4488" status="PASS">
+        </test-method> <!-- getMyBookingsWithPatientToken -->
+        <test-method signature="getMyBookingsWithTherapistToken()[pri:0, instance:tests.BookingTest@778d1062]" started-at="2026-10-17T15:14:22 EEST" name="getMyBookingsWithTherapistToken" finished-at="2026-10-17T15:14:24 EEST" duration-ms="1360" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getEarningsWithTherapistToken -->
-        <test-method signature="getEarningsWithoutToken()[pri:0, instance:tests.ProfileTest@6b26e945]" started-at="2026-10-16T13:07:59 EEST" name="getEarningsWithoutToken" finished-at="2026-10-16T13:08:01 EEST" duration-ms="1811" status="PASS">
+        </test-method> <!-- getMyBookingsWithTherapistToken -->
+        <test-method signature="getMyBookingsWithoutToken()[pri:0, instance:tests.BookingTest@778d1062]" started-at="2026-10-17T15:14:24 EEST" name="getMyBookingsWithoutToken" finished-at="2026-10-17T15:14:24 EEST" duration-ms="460" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getEarningsWithoutToken -->
-        <test-method signature="getVerificationStatusWithAdminToken()[pri:0, instance:tests.ProfileTest@6b26e945]" started-at="2026-10-16T13:08:01 EEST" name="getVerificationStatusWithAdminToken" finished-at="2026-10-16T13:08:02 EEST" duration-ms="1848" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getVerificationStatusWithAdminToken -->
-        <test-method signature="getVerificationStatusWithPatientToken()[pri:0, instance:tests.ProfileTest@6b26e945]" started-at="2026-10-16T13:08:02 EEST" name="getVerificationStatusWithPatientToken" finished-at="2026-10-16T13:08:04 EEST" duration-ms="1478" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getVerificationStatusWithPatientToken -->
-        <test-method signature="getVerificationStatusWithTherapistToken()[pri:0, instance:tests.ProfileTest@6b26e945]" started-at="2026-10-16T13:08:04 EEST" name="getVerificationStatusWithTherapistToken" finished-at="2026-10-16T13:08:06 EEST" duration-ms="1835" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getVerificationStatusWithTherapistToken -->
-        <test-method signature="getVerificationStatusWithoutToken()[pri:0, instance:tests.ProfileTest@6b26e945]" started-at="2026-10-16T13:08:06 EEST" name="getVerificationStatusWithoutToken" finished-at="2026-10-16T13:08:07 EEST" duration-ms="1608" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getVerificationStatusWithoutToken -->
-      </class> <!-- tests.ProfileTest -->
+        </test-method> <!-- getMyBookingsWithoutToken -->
+      </class> <!-- tests.BookingTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>
