@@ -16,4 +16,3 @@ tests\BookingTest.class
 tests\TherapistAvailabilityTest.class
 models\LoginRequest.class
 tests\AuthTest.class
-tests\VerificationTest.class
